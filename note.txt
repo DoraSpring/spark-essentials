@@ -1,0 +1,9 @@
+add VM Option in App Configuration, before run:
+--add-exports java.base/sun.nio.ch=ALL-UNNAMED
+
+docker-compose up  # in one command window
+./psql.bat         # in another command window, or execute  command in this file directly
+
+cd spark-cluster  # another window
+./build-images.bat # make it executable first, and then run it
+docker-compose up --scale spark-worker=3
